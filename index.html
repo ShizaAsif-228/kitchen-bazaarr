@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Bazaar</title>
+ <link rel="stylesheet" href="./CSS/style.css">
+ </head>
+
+<body>
+  <!-------------Navbar--------->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="./IMAGES/logo.png" alt="KitchenX Logo">
+    </div>
+    
+    <div class="nav-links" id="navLinks">
+         <a href="index.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sign-up.html">Sign-up</a>
+      <div class="line" id="line"></div>
+    </div>
+    
+    <div class="nav-right">
+      <div class="search-container" id="searchContainer">
+        <input type="text" class="search-bar" placeholder="Search..." id="searchBar">
+        <div class="search-icon" id="searchIcon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="cart-icon" id="cartIcon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!------------Mobile Responsive------------->
+  <div class="mobile-menu" id="mobileMenu">
+        <a href="home.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">About Us</a>
+      <a href="sign-up.html">Sign-up</a>
+  </div>
+
+
+
+  <!------------Welcome Section------------>
+  <div class="welcome-container">
+    <div class="particles-bg"></div>
+
+    <h1 class="main-title" id="mainTitle">Kitchen Bazaar</h1>
+    <div class="welcome-content" id="welcomeContent">
+      <h1 id="typingText">WELCOME TO KITCHEN BAZAAR</h1>
+      <p>Discover premium kitchenware that combines elegance with functionality. Our curated collection will transform your cooking experience.</p>
+      <div class="action-buttons" id="actionButtons">
+        <a href="sign-up.html" class="btn btn-primary">Sign Up</a>
+        <a href="home.html" class="btn btn-secondary">Free Visit</a>
+      </div>
+      <div class="experience-note" id="experienceNote">
+        Sign up for a better experience
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-------------Footer-------------->
+  <footer class="footer hidden-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Kitchen Bazaar</div>
+      <div class="footer-links">
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+        <a href="">Feedback</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="footer-bottom">© 2025 KitchenX. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script>
+    // Navbar animation
+    const navbar = document.getElementById('navbar');
+    const mainTitle = document.getElementById('mainTitle');
+    const welcomeContent = document.getElementById('welcomeContent');
+    const actionButtons = document.getElementById('actionButtons');
+    const experienceNote = document.getElementById('experienceNote');
+    const typingText = document.getElementById('typingText');
+    const links = document.querySelectorAll('.nav-links a');
+    const line = document.getElementById('line');
+    const navLinks = document.getElementById('navLinks');
+    const searchIcon = document.getElementById('searchIcon');
+    const searchContainer = document.getElementById('searchContainer');
+    const searchBar = document.getElementById('searchBar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const cartIcon = document.getElementById('cartIcon');
+    const cartCount = document.getElementById('cartCount');
+
+    // Navbar animation
+    setTimeout(() => navbar.classList.add('show'), 500);
+    setTimeout(() => mainTitle.classList.add('slide-in'), 1000);
+    setTimeout(() => {
+      mainTitle.classList.remove('slide-in');
+      mainTitle.classList.add('watermark');
+    }, 2500);
+    setTimeout(() => {
+      typingText.classList.add('typing');
+      welcomeContent.classList.add('show');
+    }, 3500);
+    setTimeout(() => actionButtons.classList.add('show'), 4000);
+    setTimeout(() => experienceNote.classList.add('show'), 4500);
+
+    // Line animation
+    function moveLine(link) {
+      const linkRect = link.getBoundingClientRect();
+      const navRect = navLinks.getBoundingClientRect();
+      const left = linkRect.left - navRect.left;
+      const width = linkRect.width;
+      line.style.width = `${width}px`;
+      line.style.transform = `translateX(${left}px)`;
+    }
+
+    // hover 
+    links.forEach(link => {
+      link.addEventListener('mouseover', () => moveLine(link));
+    });
+
+    window.addEventListener('load', () => {
+      moveLine(links[0]);
+    });
+
+    // Search bar toggle
+    searchIcon.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchContainer.classList.toggle('active');
+      if (searchContainer.classList.contains('active')) {
+        searchBar.focus();
+      } else {
+        searchBar.blur();
+      }
+    });
+
+    // Close search 
+    document.addEventListener('click', (e) => {
+      if (!searchContainer.contains(e.target)) {
+        searchContainer.classList.remove('active');
+        searchBar.blur();
+      }
+    });
+
+    // Mobile menu toggle
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+
+    // Footer animation on scroll
+    window.addEventListener("scroll", function() {
+      const footer = document.getElementById("footer");
+      const windowHeight = window.innerHeight;
+      const footerTop = footer.getBoundingClientRect().top;
+
+      if (footerTop < windowHeight - 100) {
+        footer.classList.add("show-footer");
+        footer.classList.remove("hidden-footer");
+      }
+    });
+
+    // Cart icon animation
+    cartIcon.addEventListener('click', () => {
+      cartIcon.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        cartIcon.style.transform = 'scale(1)';
+      }, 300);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us , Kitchen Bazaar</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+
+
+</head>
+
+<body>
+   <!-- Navbar Section -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="./images/logo.png" alt="KitchenX Logo">
+    </div>
+    
+    <div class="nav-links" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sign-up.html">Sign-up</a>
+      <div class="line" id="line"></div>
+    </div>
+    
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <div class="search-container" id="searchContainer">
+          <input type="text" class="search-bar" placeholder="Search..." id="searchBar">
+          <div class="search-icon" id="searchIcon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cart-icon" id="cartIcon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+      <a href="home.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sign-up.html">Sign-up</a>
+  
+  </div>
+
+
+
+  <section class="contact-header-section scroll-animate">
+    <h1 class="contact-main-heading">Contact Us</h1>
+  </section>
+
+  <div class="contact-container">
+    <div class="contact-subheader scroll-animate">
+      <p>Have questions about our kitchen products? Want to inquire about bulk orders or custom designs? Fill out the form below or reach out directly - our team is ready to assist you!</p>
+    </div>
+
+    <div class="contact-content">
+      <form class="contact-form scroll-animate" id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+
+      <div class="contact-info scroll-animate">
+        <div class="info-card">
+          <h3>Contact Information</h3>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info-text">
+              <h4>Our Location</h4>
+              <p>ABC Road, 123 district <br>Karachi south</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>+92 321-123456</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p>Kitchen Bazaar@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Business Hours</h3>
+          <div class="info-item"><i class="fas fa-clock"></i><div class="info-text"><h4>Mon - Fri</h4><p>9 AM - 6 PM</p></div></div>
+          <div class="info-item"><i class="fas fa-clock"></i><div class="info-text"><h4>Saturday</h4><p>10 AM - 4 PM</p></div></div>
+          <div class="info-item"><i class="fas fa-clock"></i><div class="info-text"><h4>Sunday</h4><p>Closed</p></div></div>
+        </div>
+
+        <div class="social-links">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container scroll-animate">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9651186087317!2d67.02199026449945!3d24.865040899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6ca468fa6b%3A0xd979cd366fee4457!2sAl-Madina%20Electronics!5e0!3m2!1sen!2s!4v1752693137619!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <footer class="footer hidden-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Kitchen Bazaar</div>
+
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+        <a href="#">Feedback</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <p class="footer-bottom">© 2025 KitchenX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar functionality
+    const links = document.querySelectorAll('.nav-links a');
+    const line = document.getElementById('line');
+    const navLinks = document.getElementById('navLinks');
+    const searchIcon = document.getElementById('searchIcon');
+    const searchContainer = document.getElementById('searchContainer');
+    const searchBar = document.getElementById('searchBar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const cartIcon = document.getElementById('cartIcon');
+
+    // Line animation
+    function moveLine(link) {
+      const linkRect = link.getBoundingClientRect();
+      const navRect = navLinks.getBoundingClientRect();
+      const left = linkRect.left - navRect.left;
+      const width = linkRect.width;
+      line.style.width = `${width}px`;
+      line.style.transform = `translateX(${left}px)`;
+    }
+
+    // Add hover + initial line
+    links.forEach(link => {
+      link.addEventListener('mouseover', () => moveLine(link));
+    });
+
+    window.addEventListener('load', () => {
+      moveLine(links[0]);
+    });
+
+    // Search bar toggle
+    searchIcon.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchContainer.classList.toggle('active');
+      if (searchContainer.classList.contains('active')) {
+        searchBar.focus();
+      } else {
+        searchBar.blur();
+      }
+    });
+
+    // Close search when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchContainer.contains(e.target)) {
+        searchContainer.classList.remove('active');
+        searchBar.blur();
+      }
+    });
+
+    // Mobile menu toggle
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+
+    // Cart icon animation
+    cartIcon.addEventListener('click', () => {
+      cartIcon.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        cartIcon.style.transform = 'scale(1)';
+      }, 300);
+    });
+
+
+
+   
+
+    // Scroll animations
+    const elements = document.querySelectorAll('.scroll-animate');
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 200);
+          revealOnScroll.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    elements.forEach((el) => revealOnScroll.observe(el));
+
+    // Contact form alert
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      this.reset();
+    });
+
+    // Footer animation
+    window.addEventListener("scroll", function () {
+      const footer = document.getElementById("footer");
+      const windowHeight = window.innerHeight;
+      const footerTop = footer.getBoundingClientRect().top;
+
+      if (footerTop < windowHeight - 100) {
+        footer.classList.add("show-footer");
+        footer.classList.remove("hidden-footer");
+      }
+    });
+  </script>
+</body>
+</html>

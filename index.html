@@ -53,9 +53,10 @@
 
   <!------------Mobile Responsive------------->
   <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
       <a href="contact.html">Contact Us</a>
       <a href="feedback.html">Feedback</a>
+      <a href="contact.html">About Us</a>
       <a href="sign-up.html">Sign-up</a>
   </div>
 
@@ -86,10 +87,10 @@
     <div class="footer-container">
       <div class="footer-logo">Kitchen Bazaar</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="#products">Products</a>
-        <a href="contact.html">Contact</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+        <a href="">Feedback</a>
       </div>
       <div class="footer-socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -178,13 +179,6 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       mobileMenu.classList.toggle('active');
-      
-      // Prevent body scrolling when menu is open
-      if (mobileMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
     });
 
     // Close mobile menu when clicking outside
@@ -192,7 +186,6 @@
       if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
         hamburger.classList.remove('active');
         mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
       }
     });
 
@@ -215,25 +208,6 @@
         cartIcon.style.transform = 'scale(1)';
       }, 300);
     });
-    
-    // Prevent zoom on double-tap (iOS)
-    let lastTouchEnd = 0;
-    document.addEventListener('touchend', function (event) {
-      const now = (new Date()).getTime();
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    }, false);
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-      // Close search bar if open on mobile
-      if (window.innerWidth < 768 && searchContainer.classList.contains('active')) {
-        searchContainer.classList.remove('active');
-      }
-    });
   </script>
 </body>
 </html>
-
